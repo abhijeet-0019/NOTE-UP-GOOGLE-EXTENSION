@@ -1,0 +1,23 @@
+{
+    "name": "NOTE UP GOOGLE-EXTENSION",
+    "version": "1.0.0",
+    "description": "This is an extension to connect google docs with other tabs",
+    "manifest_version": 3,
+    "author": "abhijeet singh",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js": ["text-script.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions":[
+        "tabs"
+    ]
+}
