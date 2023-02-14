@@ -12,6 +12,10 @@
             "matches": ["<all_urls>"],
             "js": ["text-script.js"],
             "run_at": "document_end"
+        },
+        {
+            "matches": ["https://justnotepad.com/*"],
+            "js": ["google-doc.js"]
         }
     ],
     "background": {
@@ -19,5 +23,8 @@
     },
     "permissions":[
         "tabs"
+    ],
+    "host_permissions": [
+        "https://justnotepad.com/*"
     ]
 }
